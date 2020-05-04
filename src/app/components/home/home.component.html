@@ -1,0 +1,8 @@
+<p *ngIf="!authservice.isLoggedin()">
+  please login to book service
+</p>
+<div *ngIf="authservice.isLoggedin()" class="div">
+  promotions
+  offers
+  announcements
+</div>
