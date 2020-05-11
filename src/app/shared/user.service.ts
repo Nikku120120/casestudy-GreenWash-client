@@ -12,5 +12,8 @@ export class UserService {
   getProfile(){
    return this.http.get('http://localhost:3000/api/userProfile', {headers : this.headers})
   }
+  updateProfile(mobileNumber, Address){
+    return this.http.put('http://localhost:3000/api/updateProfile',  { profileinfo: { mobilenumber: mobileNumber, Address: Address }}, {headers : this.headers},)
+   }
 }
 

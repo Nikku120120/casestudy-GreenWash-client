@@ -1,7 +1,57 @@
-<div *ngIf = "!errorMessage">
+<!-- <div *ngIf = "!errorMessage">
   <p>
     welcome {{ userName }}
   </p>
   <p>{{ userEmail }}</p>
+  <p>{{ userProfileinfo }}</p>
+</div> -->
+<p *ngIf = "errorMessage"> {{ errorMessage }}</p> 
+<div class="container">
+  <div><img src="https://tse1.mm.bing.net/th?id=OIP.89So_p0mbbDZy_H_0ymDWQAAAA&pid=Api&P=0&w=300&h=300" class="img-rounded" alt="Cinque Terre"></div>
+  <div>
+  <h3>Name</h3>
+  <h5>{{ userName }}</h5>
+  <h3>Email</h3>
+  <p>{{ userEmail }}</p>
+  <h3>Wallet Balance</h3>
+  <p>{{ walletbalance }}</p>
+  <h3>Mobile Number</h3>
+  <div>
+    <p>{{ userMobileNumber }}</p>
+    <p class="update" *ngIf="updateclicked"><input type="number" [(ngModel)]="updatemobile"></p>
+  </div>
+  <h3>Address</h3>
+  <div>
+    <p>{{ userAddress }}</p>
+    <p class="update" *ngIf="updateclicked"><input type="text" [(ngModel)]="updateAddress"></p>
+  </div>
+  <div *ngIf = "!updateclicked"> <button type="button" class="btn btn-success" (click)="update()">update</button></div>
+    <div *ngIf = "updateclicked">
+      <button (click)="save()" class="btn btn-primary">save</button>
+    </div>
+  </div>
 </div>
-<p *ngIf = "errorMessage"> {{ errorMessage }}</p>
+<!-- <div class="right">
+  <h3>Information</h3>
+  <div class="info_data">
+       <div class="data">
+          
+       </div>
+       <div class="data">
+         
+    </div>
+  </div>
+</div> -->   
+   
+    <!-- <div align="center"> -->
+      <!-- <h3>Personal Information</h3> -->
+      <!-- <div class="personal_data"> -->
+           <!-- <div class="data"> -->
+              
+           <!-- <div class="data"> -->
+      <!-- </div> -->
+  <!-- </div> -->
+<!-- <button type="button" class="btn btn-dark" align="center" (click)="update()">update</button>
+    <div *ngIf = "updateclicked">
+    <button class="btn btn-large" align="center" (click)="save()">save</button>
+</div> -->
