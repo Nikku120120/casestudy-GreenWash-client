@@ -1,4 +1,29 @@
-<p>
-  orders works!
-</p>
-<button type="button" class="btn btn-success" (click)="update()">update</button>
+<h3> Your Orders</h3>
+<br>
+
+<!-- 
+  <div *ngFor = "let order in orders">
+     
+  </div> -->
+
+  <!-- {{order.carDetails.colour}} -->
+  <!-- {{order.orderDetails.Address}} -->
+  <div *ngFor = "let order of orders">
+  Order ID : {{order._id}} <br>
+  Car Number : {{order.carDetails.number}}<br>
+  Car Colour : {{order.carDetails.colour}}<br>
+  Car Company : {{order.carDetails.company}} <br>
+  Order Price : {{order.orderDetails.cost}}<br>
+  Order Delivery Address : {{order.orderDetails.Address}} <br>
+  Order Status : <em>{{order.status}}</em><br><br>
+  </div>
+  <!-- { -->
+    <!-- carDetails: { colour: 'red', number: 'ts09759658', company: 'tata' },
+    orderDetails: {
+      cost: 200,
+      Address: 'Channamma layout, graphite  India, whitefield'
+    },
+    _id: 5ebd5d8d55e97e58a4d55a78,
+    userID: '5eabfd5793392820502c1445',
+    __v: 0
+  }, -->
